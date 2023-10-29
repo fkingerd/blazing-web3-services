@@ -1,27 +1,24 @@
 body {
-    font-family: 'Arial', sans-serif;
     background-image: url('background.jpg');
     background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    color: white;
+    background-repeat: no-repeat;
+    background-position: center center;
+    font-family: Arial, sans-serif;
+    color: white; /* Changed font color to white for visibility against dark background */
 }
 
 .card {
-    text-align: center;
-    max-width: 600px;
-    padding: 20px;
-    border: 1px solid white;
-    border-radius: 10px;
-    background-color: rgba(0, 0, 0, 0.5);
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black for readability */
+    border-radius: 8px;
 }
 
-h1 {
-    font-size: 1.5em;
+h1, h2 {
+    text-align: center;
 }
 
 a {
-    color: white;
+    color: #FFD700; /* Gold color for links to stand out */
 }
