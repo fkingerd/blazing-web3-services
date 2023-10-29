@@ -5,6 +5,7 @@ body {
     background-position: center center;
     font-family: Arial, sans-serif;
     color: white; /* Changed font color to white for visibility against dark background */
+    padding-top: 50px; /* Added padding to the top */
 }
 
 .card {
