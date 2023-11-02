@@ -62,3 +62,17 @@ footer {
         font-size: 1.2em;
     }
 }
+
+/* Initial style for dropdown content */
+.dropdown-content {
+    display: none;
+    transition: max-height 0.2s ease-out;
+    overflow: hidden;
+    max-height: 0;
+}
+
+/* Style when dropdown is active */
+.dropdown-content.active {
+    display: block;
+    max-height: 1000px;  /* Adjust this value based on your needs */
+}

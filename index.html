@@ -111,7 +111,8 @@
         </section>
     
         <section class="service">
-            <h2>Audio Production</h2>
+            <h2 onclick="toggleDropdown(this)">Audio Production</h2>
+            <div class="dropdown-content">
             <ul>
                 <li>Sound effects & music production</li>
                 <li>Syncing the sound with the video</li>
@@ -130,6 +131,22 @@
             Peerme: <a href="https://peerme.io/identify/flaka" target="_blank" rel="noreferrer">https://peerme.io/identify/flaka</a>
         </p>
     </footer>
+
+    <script>
+        // Function to toggle dropdown
+        function toggleDropdown(event) {
+            const content = event.nextElementSibling;
+            content.classList.toggle('active');
+        }
+    
+        // Add event listener to all h2 elements
+        document.querySelectorAll('main .service h2').forEach(h2 => {
+            h2.addEventListener('click', function() {
+                toggleDropdown(this);
+            });
+        });
+    </script>
+    
 </body>
 
 </html>
