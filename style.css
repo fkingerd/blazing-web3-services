@@ -30,6 +30,7 @@ header p {
 
 .service {
     margin-bottom: 2em;
+    position: relative; /* for absolute positioning of dropdown */
 }
 
 h2 {
@@ -57,22 +58,29 @@ footer {
     margin-top: 2em;
 }
 
+/* Dropdown styles */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%; /* align dropdown right below the button */
+    left: 0;
+    z-index: 1; /* display on top of other content */
+    background-color: rgba(0,0,0,0.7); /* slightly transparent black */
+    border: 1px solid #FFD700;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 10px 12px;
+    display: block;
+}
+
+.service:hover .dropdown-content {
+    display: block;
+}
+
 @media screen and (max-width: 768px) {
     header h1, h2 {
         font-size: 1.2em;
     }
-}
-
-/* Initial style for dropdown content */
-.dropdown-content {
-    display: none;
-    transition: max-height 0.2s ease-out;
-    overflow: hidden;
-    max-height: 0;
-}
-
-/* Style when dropdown is active */
-.dropdown-content.active {
-    display: block;
-    max-height: 1000px;  /* Adjust this value based on your needs */
 }
