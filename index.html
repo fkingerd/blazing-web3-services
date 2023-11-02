@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blazing Web3 Services</title>
     <link rel="stylesheet" href="style.css">
+    <script>
+        function toggleDropdown(el) {
+            el.parentElement.classList.toggle('open');
+        }
+    </script>
 </head>
 
 <body>
@@ -98,20 +103,22 @@
         </section>
         
         <section class="service">
-            <h2>DEV WORKS <span class="dropdown">&#9662;</span></h2>
+            <h2 onclick="toggleDropdown(this)">DEV WORKS <span>&#9662;</span></h2>
             <div class="dropdown-content">
-                <a href="#">Landing pages</a>
-                <a href="#">Dapps</a>
-                <a href="#">Smart contract dev</a>
-                <a href="#">Front end and back end</a>
-                <a href="#">Multiversx dapps</a>
-                <a href="#">Multiversx smart contracts</a>
+                <ul>
+                    <li>Landing pages</li>
+                    <li>Dapps</li>
+                    <li>Smart contract dev</li>
+                    <li>Front end and back end</li>
+                    <li>Multiversx dapps</li>
+                    <li>Multiversx smart contracts</li>
+                </ul>
             </div>
             <p>NOTE: This is a third party service. Pricing depends on client's needs and work time.</p>
         </section>
     
         <section class="service">
-            <h2 onclick="toggleDropdown(this)">Audio Production</h2>
+            <h2>Audio Production</h2>
             <ul>
                 <li>Sound effects & music production</li>
                 <li>Syncing the sound with the video</li>
@@ -130,20 +137,6 @@
             Peerme: <a href="https://peerme.io/identify/flaka" target="_blank" rel="noreferrer">https://peerme.io/identify/flaka</a>
         </p>
     </footer>
-
-    <script>
-        function toggleDropdown(element) {
-            const contentList = element.nextElementSibling;
-            const contentPara = contentList.nextElementSibling;
-
-            contentList.classList.toggle('active');
-
-            if(contentPara) {
-                contentPara.classList.toggle('active');
-            }
-        }
-    </script>
-
 </body>
 
 </html>

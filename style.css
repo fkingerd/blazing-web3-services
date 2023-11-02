@@ -30,14 +30,15 @@ header p {
 
 .service {
     margin-bottom: 2em;
-    position: relative; /* for absolute positioning of dropdown */
+    position: relative; 
 }
 
 h2 {
     font-size: 1.8em;
-    border-bottom: 2px solid #FFD700; /* Gold line for emphasis */
+    border-bottom: 2px solid #FFD700; 
     margin-bottom: 0.5em;
     padding-bottom: 0.5em;
+    cursor: pointer; /* indicate clickable */
 }
 
 ul {
@@ -49,7 +50,7 @@ li {
 }
 
 a {
-    color: #FFD700; /* Gold color for links to stand out */
+    color: #FFD700; 
 }
 
 footer {
@@ -60,23 +61,13 @@ footer {
 
 /* Dropdown styles */
 .dropdown-content {
-    display: none;
-    position: absolute;
-    top: 100%; /* align dropdown right below the button */
-    left: 0;
-    z-index: 1; /* display on top of other content */
-    background-color: rgba(0,0,0,0.7); /* slightly transparent black */
-    border: 1px solid #FFD700;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
 }
 
-.dropdown-content a {
-    color: white;
-    padding: 10px 12px;
-    display: block;
-}
-
-.service:hover .dropdown-content {
-    display: block;
+.service.open .dropdown-content {
+    max-height: 300px; /* or you can adjust based on content size */
 }
 
 @media screen and (max-width: 768px) {
