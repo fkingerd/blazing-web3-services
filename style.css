@@ -61,7 +61,7 @@ footer {
 
 /* Dropdown styles */
 .dropdown-content {
-    max-height: 0;
+    max-height: 1000px;
     overflow: hidden;
     transition: max-height 0.5s ease-out;
 }
@@ -69,6 +69,11 @@ footer {
 .service.open .dropdown-content {
     max-height: 300px; /* or you can adjust based on content size */
 }
+
+.indented-list li {
+    padding-left: 20px; /* Adjust the value as needed */
+}
+
 
 @media screen and (max-width: 768px) {
     header h1, h2 {
